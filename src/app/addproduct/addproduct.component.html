@@ -1,0 +1,54 @@
+<form [formGroup]="addProduct" >
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">title</label>
+    <input formControlName="title" type="text" class="form-control" id="exampleFormControlInput1" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">price</label>
+    <input formControlName="price" type="text" class="form-control" id="exampleFormControlInput1" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">description</label>
+    <input formControlName="description" type="text" class="form-control" id="exampleFormControlInput1" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">image</label>
+    <input formControlName="image" type="text" class="form-control" id="exampleFormControlInput1" >
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">category</label>
+    <input formControlName="category" type="text" class="form-control" id="exampleFormControlInput1" >
+  </div>
+
+  <div class="d-grid gap-2 w-100">
+    <button (click)="add()" class="btn btn-primary w-100" type="button">Add</button>
+  </div>
+  
+</form>
+
+
+
+<table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">title</th>
+      <th scope="col">price</th>
+      <th scope="col">description</th>
+      <th scope="col">image</th>
+      <th scope="col">category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>{{dataProduct.id}}</td>
+      <td>{{dataProduct.title}}</td>
+      <td>{{dataProduct.price}}</td>
+      <td>{{dataProduct.description}}</td>
+      <td>{{dataProduct.image}}</td>
+      <td>{{dataProduct.category}}</td>
+    </tr>
+    
+  </tbody>
+</table>

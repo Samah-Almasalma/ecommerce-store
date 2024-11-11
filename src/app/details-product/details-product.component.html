@@ -1,0 +1,17 @@
+<div class="all">
+  <div class="row">
+    <div class="col-md-5">
+      <img class="w-100" [src]="detailsProduct.image" alt="" />
+    </div>
+    <div class="col-md-7">
+      <ul>
+        <li>Title: {{ detailsProduct.title | titlecase }}</li>
+        <li>Description: {{ detailsProduct.description | uppercase }}</li>
+        <li>Category: {{ detailsProduct.category }}</li>
+        <li>Price: {{ detailsProduct.price | currency }}</li>
+        <li>Rate: {{ detailsProduct.rating.rate }}</li>
+        <li>Count: {{ detailsProduct.rating.count }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

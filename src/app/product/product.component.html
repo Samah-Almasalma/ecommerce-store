@@ -1,0 +1,29 @@
+<div>
+  <div routerLink="/details/{{ data.id }}">
+    <img [src]="data.image" class="w-100 card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ data.title }}</h5>
+      <p class="card-text">{{ data.description }}</p>
+      <p class="card-text">{{ data.category }}</p>
+    </div>
+  </div>
+
+  <div class="my-4">
+    <a
+      *ngIf="!addProduct"
+      href="#"
+      (click)="addProduct = true"
+      class="btn btn-primary"
+      >Add Cart</a
+    >
+  </div>
+  <div *ngIf="addProduct" class="my-4 d-flex w-75" style="height: 50px">
+    <a
+      (click)="add(); addProduct = false"
+      href="#"
+      class="btn btn-success h-100"
+      >Add Cart</a
+    >
+    <input [(ngModel)]="amount" class="form-control h-100" type="number" />
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<app-shared *ngIf="showLoader"></app-shared>
+
+
+
+<div *ngIf="showError" class="alert alert-danger" role="alert">
+  {{ showErrorValue }}
+</div>
+
+<div class="col-md-10 m-4">
+  <app-select
+    [data]="showCategories"
+    [title]="'Categories'"
+    (selectValue)="filterData($event)"
+  ></app-select>
+</div>
+
+<div *ngIf="errorAdd" class="alert alert-danger" role="alert">
+  The Product is already in Cart
+</div>
+
+
+
+<div *ngIf="doneAdd" class="alert alert-success" role="alert">
+  The Product added in Cart Now
+</div>
+
+<div class="row container pt-4">
+  <div class="col-md-3 text">
+    <h2>Trending</h2>
+    <h2>Products</h2>
+    <h2>To show now</h2>
+    <span>Most watched now</span>
+    <div class="brder w-50"></div>
+  </div>
+
+
+
+  <div *ngFor="let item of showData" class="pro col-md-3" >
+    <app-product [data]="item" (item)="addCart($event)"></app-product>
+  </div>
+</div>

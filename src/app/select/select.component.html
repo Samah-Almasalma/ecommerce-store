@@ -1,0 +1,14 @@
+<label for="" class="my-1">{{title}}</label>
+<select (change)="changeValue($event)" class="form-select w-100" aria-label="Default select example">
+  <option value="all" >all</option>
+  <option *ngFor="let itemCategories of data" value="{{itemCategories}}">{{itemCategories}}</option>
+</select>
+
+
+
+
+<!-- <label for="" class="my-1">Categories</label>
+<select (change)="filterData($event)" class="form-select w-100" aria-label="Default select example">
+  <option value="all" >all</option>
+  <option *ngFor="let itemCategories of showCategories" value="{{itemCategories}}">{{itemCategories}}</option>
+</select> -->

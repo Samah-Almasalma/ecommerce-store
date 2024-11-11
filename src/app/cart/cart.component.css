@@ -1,0 +1,10 @@
+span {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #c61d22;
+}
+.line {
+  width: 20%;
+  height: 1px;
+  background-color: #c61d22;
+}

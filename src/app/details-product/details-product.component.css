@@ -1,0 +1,15 @@
+.all {
+  width: 90%;
+  margin: 90px auto;
+  height:500px
+}
+ul li {
+  /* list-style-type: none; */
+  text-decoration: none;
+  font-size: 23px;
+  margin: 15px 0;
+}
+.all img {
+  max-height: 500px;
+  min-height: 500px;
+}
